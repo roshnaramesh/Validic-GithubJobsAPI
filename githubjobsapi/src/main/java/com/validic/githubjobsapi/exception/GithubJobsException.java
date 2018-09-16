@@ -1,3 +1,6 @@
+/*
+ * (c) Copyright Roshna Ramesh
+ */
 package com.validic.githubjobsapi.exception;
 
 

@@ -1,3 +1,6 @@
+/*
+ * (c) Copyright Roshna Ramesh
+ */
 package com.validic.githubjobsapi;
 
 import org.springframework.boot.SpringApplication;

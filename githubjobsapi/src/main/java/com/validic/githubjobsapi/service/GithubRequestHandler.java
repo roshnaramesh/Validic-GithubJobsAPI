@@ -1,5 +1,5 @@
 /*
- * (c) Copyright 2018 EAB
+ * (c) Copyright Roshna Ramesh
  */
 package com.validic.githubjobsapi.service;
 
