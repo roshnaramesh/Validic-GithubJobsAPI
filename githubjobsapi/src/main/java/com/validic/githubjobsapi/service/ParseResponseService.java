@@ -6,7 +6,6 @@ package com.validic.githubjobsapi.service;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.LongAdder;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +22,8 @@ public class ParseResponseService {
 	private GithubRequestHandler githubRequestHandler;
 
 
-	public int findTotalNumberOfJobsByCity( LongAdder adder, String city ) throws GithubJobsException {
-		int numberOfJobsInCity = (int) githubRequestHandler.requestJobsByCity( city.replace( " ", "+" ).trim() ).length;
-		adder.add( numberOfJobsInCity );
-		return numberOfJobsInCity;
+	public int findTotalNumberOfJobsByCity( String city ) throws GithubJobsException {
+		return (int) githubRequestHandler.requestJobsByCity( city.replace( " ", "+" ).trim() ).length;
 	}
 
 

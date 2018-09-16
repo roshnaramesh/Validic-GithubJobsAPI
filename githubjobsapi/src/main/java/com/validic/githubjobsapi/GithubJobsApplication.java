@@ -11,10 +11,10 @@ import com.validic.githubjobsapi.exception.GithubJobsException;
 
 
 @SpringBootApplication
-public class Application {
+public class GithubJobsApplication {
 
 	public static void main( String[] args ) throws GithubJobsException {
-		try ( ConfigurableApplicationContext context = SpringApplication.run( Application.class, args ) ) {
+		try ( ConfigurableApplicationContext context = SpringApplication.run( GithubJobsApplication.class, args ) ) {
 			JobManagement jobsManagement = context.getBean( JobManagement.class );
 			jobsManagement.run();
 		} catch ( Exception e ) {

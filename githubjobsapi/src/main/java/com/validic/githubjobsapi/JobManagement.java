@@ -33,7 +33,7 @@ public class JobManagement {
 			System.out.println( "\n" + city.getCity() + ":" );
 
 			String cityOfJob = city.getCity().replace( " ", "+" );
-			int totalNumberOfJobsByCity = parseResponseService.findTotalNumberOfJobsByCity( adder, cityOfJob );
+			int totalNumberOfJobsByCity = parseResponseService.findTotalNumberOfJobsByCity( cityOfJob );
 
 			for ( Languages programmingLanguage : Languages.values() ) {
 
@@ -48,6 +48,7 @@ public class JobManagement {
 							.stream()
 							.forEach( jobType -> System.out.println( " --" + jobType.getKey() + "-->" + asPercent( jobType.getValue().size(), totalNumberOfJobsByCity ) ) );
 			}
+			adder.add( totalNumberOfJobsByCity );
 		}
 
 		System.out.println( "\nSourced: " + adder.sum() );
